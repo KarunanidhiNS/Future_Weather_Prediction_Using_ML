@@ -24,16 +24,17 @@ This project predicts tomorrow's weather conditions using a **Support Vector Mac
 ## 📂 Project Structure
 Weather Prediction Using Flask Framework/ 
 
-![image](https://github.com/user-attachments/assets/26ef2d53-d224-48f9-b10e-96247e2588ad)
+![Project Structure](static/screenshots/04.png)
 
 
 🌟 Screenshots
 
 ### **Home Page**
 ![Home Page](static/screenshots/01.png)
+![Home Page](static/screenshots/02.png)
 
 ### **Prediction Page**
-![Prediction Page](static/screenshots/02.png)
+![Prediction Page](static/screenshots/03.png)
 
 
 📊 Machine Learning Model
