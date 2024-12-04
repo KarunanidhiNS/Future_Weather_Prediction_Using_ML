@@ -23,25 +23,19 @@ This project predicts tomorrow's weather conditions using a **Support Vector Mac
 
 ## 📂 Project Structure
 Weather Prediction Using Flask Framework/ 
-                                         │
-                                         ├── static/ # Static files (CSS, JS, images) 
-                                         ├── templates/ # HTML files 
-                                         ├── app.py # Flask application 
-                                         ├── model.pkl # Trained SVM model 
-                                         ├── README.md # Project documentation 
-                                         ├── requirements.txt # Python dependencies 
-                                         └── dataset.csv # Historical weather data
+
+![image](https://github.com/user-attachments/assets/26ef2d53-d224-48f9-b10e-96247e2588ad)
 
 
 🌟 Screenshots
 
 Home Page
 
-"static\screenshots\01.png"
+![image](https://github.com/user-attachments/static/screenshots/01)
 
 Prediction Page
 
-"static\screenshots\02.png"
+![image](https://github.com/user-attachments/static/screenshots/02)
 
 📊 Machine Learning Model
 
@@ -64,4 +58,3 @@ This project is licensed under the MIT License.
 
 ✨ Acknowledgments
 Inspired by real-world weather prediction systems.
-Special thanks to the contributors and open-source libraries used in this project.
