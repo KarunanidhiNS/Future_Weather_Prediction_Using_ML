@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction Result</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz2xS50R1iI6TjkeZvuvQReatKHVbTHKrJw6uUXlY1fxQsVkmZPuePcw3y1dLCgLpZa60&usqp=CAU" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230313/pngtree-dramatic-rainy-sky-and-dark-clouds-dramatic-rainy-sky-and-dark-photo-image_1900907.jpg'); /* Replace with actual background image URL */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .result-container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 45px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .btn-home {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            padding: 12px 25px;
+            border: none;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .btn-home:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="result-container fade-in">
+    <h2>Next Day Weather Predicted</h2>
+
+    <div class="result">
+        <h3>Predicted Temperature: {{ next_day_temperature }} °C</h3>
+        <h3>Predicted Weather Condition: {{ next_day_weather }}</h3>
+    </div>
+<br>
+    <a href="/" class="btn-home">Go Back</a>
+</div>
+
+</body>
+</html>

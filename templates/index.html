@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction App</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz2xS50R1iI6TjkeZvuvQReatKHVbTHKrJw6uUXlY1fxQsVkmZPuePcw3y1dLCgLpZa60&usqp=CAU" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1627890312914-448e54f7d5e0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmFpbnklMjBza3l8ZW58MHx8MHx8fDA%3D'); /* Replace with your weather image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: moveClouds 60s linear infinite;
+        }
+
+        @keyframes moveClouds {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 0; }
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #000000;
+            font-weight: bold;
+            font-style: inherit;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            width: 100%;
+            border: none;
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            text-align: center;
+            padding: 20px;
+            background-color: #e7f4e6;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .result h3 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Weather Prediction Using ML</h2>
+    <br>
+    <form action="/predict" method="post">
+        <div class="form-group">
+            <label for="temperature">Temperature (°C):</label>
+            <input type="text" id="temperature" name="temperature" class="form-control" required placeholder="Enter Temperature">
+        </div>
+
+        <div class="form-group">
+            <label for="humidity">Humidity (%):</label>
+            <input type="text" id="humidity" name="humidity" class="form-control" required placeholder="Enter Humidity">
+        </div>
+
+        <div class="form-group">
+            <label for="windspeed">Wind Speed (km/h):</label>
+            <input type="text" id="windspeed" name="windspeed" class="form-control" required placeholder="Enter Wind Speed">
+        </div>
+
+        <div class="form-group">
+            <label for="pressure">Pressure (hPa):</label>
+            <input type="text" id="pressure" name="pressure" class="form-control" required placeholder="Enter Pressure">
+        </div>
+
+        <div class="form-group">
+            <label for="precipitation">Precipitation (mm):</label>
+            <input type="text" id="precipitation" name="precipitation" class="form-control" required placeholder="Enter Precipitation">
+        </div>
+
+        <div class="form-group">
+            <label for="cloudcover">Cloud Cover (%):</label>
+            <input type="text" id="cloudcover" name="cloudcover" class="form-control" required placeholder="Enter Cloud Cover">
+        </div>
+
+        <div class="form-group">
+            <label for="dewpoint">Dew Point (°C):</label>
+            <input type="text" id="dewpoint" name="dewpoint" class="form-control" required placeholder="Enter Dew Point">
+        </div>
+
+        <div class="form-group">
+            <label for="solarradiation">Solar Radiation (W/m²):</label>
+            <input type="text" id="solarradiation" name="solarradiation" class="form-control" required placeholder="Enter Solar Radiation">
+        </div>
+
+        <div class="form-group">
+            <label for="visibility">Visibility (km):</label>
+            <input type="text" id="visibility" name="visibility" class="form-control" required placeholder="Enter Visibility">
+        </div>
+
+        <div class="form-group">
+            <label for="uvindex">UV Index:</label>
+            <input type="text" id="uvindex" name="uvindex" class="form-control" required placeholder="Enter UV Index">
+        </div>
+
+        <div class="form-group">
+            <label for="aqi">AQI:</label>
+            <input type="text" id="aqi" name="aqi" class="form-control" required placeholder="Enter AQI">
+        </div>
+
+        <div class="form-group">
+            <label for="co">CO (ppm):</label>
+            <input type="text" id="co" name="co" class="form-control" required placeholder="Enter CO">
+        </div>
+
+        <div class="form-group">
+            <label for="no2">NO2 (ppb):</label>
+            <input type="text" id="no2" name="no2" class="form-control" required placeholder="Enter NO2">
+        </div>
+
+        <div class="form-group">
+            <label for="so2">SO2 (ppb):</label>
+            <input type="text" id="so2" name="so2" class="form-control" required placeholder="Enter SO2">
+        </div>
+
+        <div class="form-group">
+            <label for="o3">O3 (ppb):</label>
+            <input type="text" id="o3" name="o3" class="form-control" required placeholder="Enter O3">
+        </div>
+
+        <button type="submit" class="btn-submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>
