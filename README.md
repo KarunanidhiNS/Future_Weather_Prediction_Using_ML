@@ -37,28 +37,30 @@ Weather Prediction Using Flask Framework/
 ![Prediction Page](static/screenshots/03.png)
 
 
-📊 # **Machine Learning Model**
+📊 **Machine Learning Model**
 
 Algorithm: Support Vector Machine (SVM).
+
 Training Data: Based on historical weather data (e.g., temperature, humidity, wind speed).
+
 Accuracy: Achieved ~ 95% accuracy during testing.
 
 
-🛡️ # **Future Enhancements**
+🛡️ **Future Enhancements**
 
 Add real-time weather data integration.
 Deploy on cloud platforms like Heroku or AWS.
 Support for additional weather metrics (e.g., air quality).
 
-🤝 #**Contributing**
+🤝 **Contributing**
 
 Fork the repository.
 
 
-📄 # **License**
+📄 **License**
 
 This project is licensed under the MIT License.
 
-✨ # **Acknowledgments**
+✨ **Acknowledgments**
 
 Inspired by real-world weather prediction systems.
