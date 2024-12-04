@@ -29,13 +29,12 @@ Weather Prediction Using Flask Framework/
 
 🌟 Screenshots
 
-Home Page
+### **Home Page**
+![Home Page](static/screenshots/01.png)
 
-static/screenshots/01
+### **Prediction Page**
+![Prediction Page](static/screenshots/02.png)
 
-Prediction Page
-
-static/screenshots/02
 
 📊 Machine Learning Model
 
