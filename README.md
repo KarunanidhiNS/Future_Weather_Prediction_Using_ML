@@ -31,11 +31,11 @@ Weather Prediction Using Flask Framework/
 
 Home Page
 
-![image](https://github.com/user-attachments/static/screenshots/01)
+static/screenshots/01
 
 Prediction Page
 
-![image](https://github.com/user-attachments/static/screenshots/02)
+static/screenshots/02
 
 📊 Machine Learning Model
 
